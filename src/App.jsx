@@ -14,7 +14,10 @@ export default function App() {
       {/* Your Content/Components */}
       <div className="relative z-10">
         <Header />
-      </div>
+          <div className="relative z-10 flex flex-col items-center justify-center text-center text-gray-300 px-6 mt-24">
+              <h1>hillnose.xyz</h1>
+            </div>
+        </div>
     </div>
   );
 }
