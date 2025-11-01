@@ -3,7 +3,9 @@ import React from 'react';
 const Header = () => {
   return (
     <header className="p-8">
-      <h1 className="text-4xl font-bold text-white">Bang</h1>
+        <div className="text-4xl font-bold relative z-10 flex flex-col items-center justify-center text-center text-gray-300 mt-1">
+            <h1>Bang</h1>
+        </div>
     </header>
   );
 }
