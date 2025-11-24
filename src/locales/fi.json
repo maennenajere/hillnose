@@ -1,0 +1,41 @@
+{
+  "nav": {
+    "home": "Yleiskatsaus",
+    "contact": "Ota yhteyttä"
+  },
+  "home": {
+    "greet": "Hei, olen Jere 👋",
+    "whoami": "Opiskelen tieto- ja viestintätekniikkaa Oulun ammattikorkeakoulussa, painotuksena ohjelmistokehitys ja pilviteknologiat. Ennen IT-alaa työskentelin yli viisi vuotta teollisuudessa - hitsasin, käämin ja kokosin muuntajia sekä kuristimia. Se aika opetti arvostamaan selkeää rakennetta, tehokkuutta ja sitä, että asiat tehdään kerralla oikein. Sama ajattelutapa kulkee yhä mukana kaikessa mitä teen - oli kyse sitten projekteista tai työasioista.",
+    "whatidoTitle": "Mitä teen \uD83D\uDCAD",
+    "whatido": "Rakennan verkkosovelluksia ja taustajärjestelmiä. Keskityn itsehostattuihin palveluihin ja automaatioihin, jotka pyörivät taustalla omassa rauhassaan. Jos jokin on mahdollista automatisoida tai ajaa omalla raudalla, todennäköisesti olen jo sen kimpussa. Harrastan myös elektroniikkaa - juotan piirilevyjä, johdotan ja ohjelmoin mikrokontrollereita kuten ESP32 ja Raspberry Pi. Tykkään yhdistää laitteet ja ohjelmiston toimiviksi kokonaisuuksiksi.",
+    "techstackTitle": "Teknologiat \uD83D\uDEE0\uFE0F️",
+    "projectsTitle": "Projektit \uD83D\uDCC1",
+    "projects": "Vapaa-ajalla teen mielelläni omia projekteja <1>GitHubiin</1>. Se on paras tapa oppia uutta ja pysyä ajan tasalla. Yritän parantaa taitojani askel kerrallaan."
+  },
+  "contact": {
+    "title": "Jutellaan! \uD83D\uDCAC",
+    "description": "Olipa kyseessä nopea kysymys, duunijuttu, tai halusit vaan moikata. Kirjoita alle tai laita viestiä Discordissa, Telegramissa tai sähköpostilla.",
+    "timeframe": "Minulle kello on tällä hetkellä <1>{{time}}</1>, joten olen todennäköisesti <2>{{status}}</2>. Otan sinuun pian yhteyttä."
+  },
+  "contactForm": {
+    "open": "Ota yhteyttä",
+    "open_description": "Lähetä minulle sähköpostia!",
+    "title": "Ota yhteyttä",
+    "description": "Täytä alla oleva lomake lähettääksesi minulle viestin.",
+    "emailPlaceholder": "esim. nimesi@example.fi",
+    "messagePlaceholder": "Hei Jere...",
+    "name": "Nimi",
+    "email": "Sähköposti",
+    "message": "Viesti",
+    "send": "Lähetä",
+    "cancel": "Peruuta",
+    "success": "Kiitos viestistäsi! Vastaan sinulle pian.",
+    "error": "Viestin lähettämisessä tapahtui virhe. Yritä myöhemmin uudelleen.",
+    "timeMessage": "Minulle kello on {{time}}, joten olen {{status}}. Palaan sinulle pian.",
+    "awake": "todennäköisesti hereillä",
+    "sleeping": "todennäköisesti nukkumassa"
+  },
+  "cta": {
+    "web": "Tarvitsetko verkkosivuja? Laita viestiä!"
+  }
+}
