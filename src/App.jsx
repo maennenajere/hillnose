@@ -8,8 +8,6 @@ import Footer from './components/Footer.jsx'
 import { useTranslation } from 'react-i18next'
 
 export default function App() {
-    const { t } = useTranslation()
-
     return (
         <div className="relative bg-black min-h-dvh">
             <div
