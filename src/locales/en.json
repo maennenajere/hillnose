@@ -1,0 +1,47 @@
+{
+  "nav": {
+    "home": "Overview",
+    "contact": "Get in Touch"
+  },
+  "home": {
+    "greet": "Hey, I'm Jere \uD83D\uDC4B",
+    "whoami": "I study ICT engineering at Oulu University of Applied Sciences, focusing on software development and cloud technologies. Before getting into IT, I spent over five years in industrial work - welding and winding transformers and inductors. That time taught me to value clear structure, efficiency, and doing things properly the first time. I still carry the same mindset into everything I build today, whether it’s a personal project, school assignment or work-related.",
+    "whatidoTitle": "What I Do \uD83D\uDCAD",
+    "whatido": "I build web apps and backend systems that stay stable without constant babysitting. I focus on self-hosted services and automation workflows that run quietly in the background. If something can be automated or run on my own hardware, I’m usually already doing it. Coffee may or may not be involved. (It is.). I also tinker with electronics - soldering, wiring and programming microcontrollers like ESP32s and Raspberry Pis. I like connecting the hardware and software into something useful.",
+    "techstackTitle": "Technologies \uD83D\uDEE0\uFE0F️",
+    "projectsTitle": "Projects \uD83D\uDCC1",
+    "projects": "In my free time, I enjoy building my own projects on <1>GitHub</1>. It’s the best way for me to learn new things and stay up to date. I try to improve my skills step by step, every day.",
+    "projects_showcase": "Here are some examples of projects I’ve built while learning."
+  },
+  "contact": {
+    "title": "Let's chat! \uD83D\uDCAC",
+    "description": "Whether it’s a quick question, job thing, or you just felt like saying hello. Write below or find me on Discord, Telegram or email"
+  },
+  "contactForm": {
+    "open": "Get in Touch",
+    "open_description": "Send me an email!",
+    "title": "Contact Me",
+    "description": "Fill out the form below to send me a message.",
+    "emailPlaceholder": "e.g. name@example.com",
+    "messagePlaceholder": "Hi Jere...",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "send": "Send",
+    "cancel": "Cancel",
+    "success": "Thanks for your message! I'll get back to you soon.",
+    "error": "There was an error sending your message. Please try again later.",
+    "timeMessage": "It's currently {{time}} for me, so I'm {{status}}. I'll get back to you soon.",
+    "awake": "likely awake",
+    "sleeping": "likely asleep"
+  },
+  "footer": {
+    "rights": "All rights reserved."
+  },
+  "maintenance": {
+    "message": "Site is currently undergoing scheduled maintenance."
+  },
+  "cta": {
+    "web": "In need of a website? Just drop me a message!"
+  }
+}
