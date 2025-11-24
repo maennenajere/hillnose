@@ -16,7 +16,7 @@ export default function Quotes() {
             if (error) {
                 console.error('Error fetching:', error)
                 setQuote({
-                    greeting: 'Hello traveler!',
+                    quote: 'Hello traveler!',
                     date: new Date().toISOString(),
                     _fallback: true,
                 })
