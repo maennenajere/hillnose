@@ -1,6 +1,16 @@
 import React, { useEffect, useState, useRef } from "react";
 import { ExternalLink, Star, Calendar, Code2 } from "lucide-react";
 
+const SHOW_REPOS = [
+    "hillnose",
+    "hillnoselinks",
+    "ATM-Project-2024",
+    "Web-Development-Project-2024",
+    "MotionPath",
+    "beaknet",
+    "TastyOulu"
+];
+
 export default function RepoList() {
     const [repos, setRepos] = useState([]);
     const [error, setError] = useState(null);
@@ -8,25 +18,14 @@ export default function RepoList() {
     const username = "maennenajere";
 
     const audioRef = useRef(null);
-    useEffect(() => {
-        audioRef.current = new Audio('/sound/pop.mp3');
-    }, []);
 
     const click = () => {
-        if (!audioRef.current) return;
+        if (!audioRef.current) {
+            audioRef.current = new Audio('/sound/pop.mp3');
+        }
         audioRef.current.currentTime = 0;
         audioRef.current.play();
     };
-
-    const show = [
-        "hillnose",
-        "hillnoselinks",
-        "ATM-Project-2024",
-        "Web-Development-Project-2024",
-        "MotionPath",
-        "beaknet",
-        "TastyOulu"
-    ];
 
     useEffect(() => {
         async function fetchRepos() {
@@ -39,7 +38,7 @@ export default function RepoList() {
                 const data = await res.json();
 
                 const filtered = Array.isArray(data)
-                    ? data.filter(repo => show.includes(repo.name))
+                    ? data.filter(repo => SHOW_REPOS.includes(repo.name))
                     : [];
 
                 setRepos(filtered);

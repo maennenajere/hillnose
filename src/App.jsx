@@ -1,11 +1,11 @@
-import React from 'react'
+import React, { lazy, Suspense } from 'react'
 import { Routes, Route } from 'react-router-dom'
-import Home from './routes/Home.jsx'
-import Contact from './routes/Contact.jsx'
 import Header from './components/Header.jsx'
 import Quote from './components/Quote.jsx'
 import Footer from './components/Footer.jsx'
-import { useTranslation } from 'react-i18next'
+
+const Home = lazy(() => import('./routes/Home.jsx'))
+const Contact = lazy(() => import('./routes/Contact.jsx'))
 
 export default function App() {
     return (
@@ -21,10 +21,12 @@ export default function App() {
             <Header />
             <main className="relative z-10 grid place-items-center px-4 text-white pb-10 pt-24">
                 <div className="w-full max-w-xl md:max-w-3xl lg:max-w-4xl text-center flex flex-col gap-10">
-                    <Routes>
-                        <Route path="/" element={<Home />} />
-                        <Route path="/contact" element={<Contact />} />
-                    </Routes>
+                    <Suspense fallback={<div className="text-white text-center py-8">Loading...</div>}>
+                        <Routes>
+                            <Route path="/" element={<Home />} />
+                            <Route path="/contact" element={<Contact />} />
+                        </Routes>
+                    </Suspense>
                     <Quote />
                     <Footer />
                 </div>

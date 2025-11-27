@@ -4,9 +4,12 @@ import { useTranslation } from 'react-i18next'
 export default function LanguageToggle() {
     const { i18n } = useTranslation()
 
-    const audioRef = useRef(new Audio('/sound/pop.mp3'));
+    const audioRef = useRef(null);
 
     const click = () => {
+        if (!audioRef.current) {
+            audioRef.current = new Audio('/sound/pop.mp3');
+        }
         audioRef.current.currentTime = 0;
         audioRef.current.play();
     };

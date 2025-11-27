@@ -7,9 +7,12 @@ import { useTranslation } from 'react-i18next';
 
 const Header = () => {
   const { t } = useTranslation();
-  const audioRef = useRef(new Audio('/sound/pop.mp3'));
+  const audioRef = useRef(null);
 
   const click = () => {
+    if (!audioRef.current) {
+      audioRef.current = new Audio('/sound/pop.mp3');
+    }
     audioRef.current.currentTime = 0;
     audioRef.current.play();
   };

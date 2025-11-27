@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import TechStack from '@/components/TechStack.jsx';
 import RepoList from '@/components/RepoList.jsx';
 import { useTranslation, Trans } from "react-i18next";
