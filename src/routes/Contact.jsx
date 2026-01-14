@@ -25,7 +25,7 @@ const Contact = () => {
     return (
         <>
             <section className="flex flex-col text-left text-white text-lg mt-10 w-full">
-                <h1 className="text-white font-bold text-5xl md:text-5xl lg:text-5xl mb-4">{t('contact.title')}</h1>
+                <h1 className="text-white font-bold text-5xl md:text-5xl lg:text-5xl mb-2">{t('contact.title')}</h1>
                 <p className="text-white/70 mt-2">
                     {t('contact.description')}
                 </p>
@@ -42,7 +42,7 @@ const Contact = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     onClick={() =>
-                        umami.track("Contact link clicked", {
+                        umami.track("Contact link clicked Discord", {
                             type: "discord",
                             value: "@hillnose",
                             source: "Contact"
@@ -58,7 +58,7 @@ const Contact = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     onClick={() =>
-                        umami.track("Contact link clicked", {
+                        umami.track("Contact link clicked Telegram", {
                             type: "telegram",
                             value: "@maeennenae",
                             source: "Contact"
@@ -72,7 +72,7 @@ const Contact = () => {
                 <a
                     href="mailto:contact@hillnose.xyz"
                     onClick={() =>
-                        umami.track("Contact link clicked", {
+                        umami.track("Contact link clicked Email", {
                             type: "email",
                             value: "contact@hillnose.xyz",
                             source: "Contact"

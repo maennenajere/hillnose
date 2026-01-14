@@ -18,7 +18,6 @@ export default function Quotes() {
                 setQuote({
                     quote: 'Hello traveler!',
                     date: new Date().toISOString(),
-                    _fallback: true,
                 })
             } else {
                 setQuote(data)
@@ -29,20 +28,30 @@ export default function Quotes() {
     }, [])
 
     if (!quote) {
-        console.error("table error")
-        return null
+        return (
+            <p className="text-gray-400 italic text-sm">
+                “Hello traveler!” <br />
+                <span className="text-gray-600 text-xs">
+                    {new Date().toLocaleDateString('fi-FI', {
+                        day: 'numeric',
+                        month: 'short',
+                        year: 'numeric',
+                    })}
+                </span>
+            </p>
+        )
     }
 
     return (
         <p className="text-gray-400 italic text-sm">
             “{quote.quote}” <br />
             <span className="text-gray-600 text-xs">
-        {new Date(quote.date).toLocaleDateString('fi-FI', {
-            day: 'numeric',
-            month: 'short',
-            year: 'numeric',
-        })}
-      </span>
+                {new Date(quote.date).toLocaleDateString('fi-FI', {
+                    day: 'numeric',
+                    month: 'short',
+                    year: 'numeric',
+                })}
+            </span>
         </p>
     )
 }

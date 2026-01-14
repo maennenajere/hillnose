@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import { useForm } from '@formspree/react';
 import { useTranslation } from "react-i18next";
 
 function ContactForm() {
-    const [state, handleSubmit] = useForm("mjkjkvvz");
+    const [submitting, setSubmitting] = useState(false);
+    const [succeeded, setSucceeded] = useState(false);
     const [turnstileToken, setTurnstileToken] = useState("");
     const { t } = useTranslation();
 
@@ -18,7 +18,37 @@ function ContactForm() {
         return () => window.turnstile?.remove(id);
     }, []);
 
-    if (state.succeeded) {
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        setSubmitting(true);
+
+        const formData = new FormData(e.target);
+        const data = Object.fromEntries(formData.entries());
+
+        try {
+            const response = await fetch(import.meta.env.VITE_FORMSPARK_ACTION_URL, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    Accept: "application/json",
+                },
+                body: JSON.stringify(data),
+            });
+
+            if (response.ok) {
+                setSucceeded(true);
+            } else {
+                alert("Something went wrong. Please try again.");
+            }
+        } catch (error) {
+            console.error("Form submission error:", error);
+            alert("Something went wrong. Please try again.");
+        } finally {
+            setSubmitting(false);
+        }
+    };
+
+    if (succeeded) {
         return (
             <p className="text-orange-400 font-light text-center">
                 {t('contactForm.success')}
@@ -64,11 +94,12 @@ function ContactForm() {
 
             <div className="flex flex-row-reverse gap-x-6">
                 <button
+                    aria-label="Send message"
                     className="cursor-pointer rounded-md bg-white px-8 py-4 text-sm font-medium text-zinc-900 hover:bg-orange-400 hover:text-white"
                     type="submit"
-                    disabled={!turnstileToken || state.submitting}
+                    disabled={!turnstileToken || submitting}
                 >
-                    {t('contactForm.send')}
+                    {submitting ? "..." : t('contactForm.send')}
                 </button>
             </div>
         </form>
