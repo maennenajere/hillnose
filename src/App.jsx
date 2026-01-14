@@ -1,5 +1,5 @@
 import React from 'react'
-import { Routes, Route, useLocation } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
 import Home from './routes/Home.jsx'
 import Contact from './routes/Contact.jsx'
 import QRSite from './routes/QRSite.jsx'
