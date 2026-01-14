@@ -86,6 +86,7 @@ export default function RepoList() {
         <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
             {repos.map(repo => (
                 <a
+                    aria-label={repo.name}
                     key={repo.id}
                     href={repo.html_url}
                     target="_blank"

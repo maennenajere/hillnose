@@ -5,12 +5,14 @@
   },
   "home": {
     "greet": "Hei, olen Jere 👋",
-    "whoami": "Opiskelen tieto- ja viestintätekniikkaa Oulun ammattikorkeakoulussa, painotuksena ohjelmistokehitys ja pilviteknologiat. Ennen IT-alaa työskentelin yli viisi vuotta teollisuudessa - hitsasin, käämin ja kokosin muuntajia sekä kuristimia. Se aika opetti arvostamaan selkeää rakennetta, tehokkuutta ja sitä, että asiat tehdään kerralla oikein. Sama ajattelutapa kulkee yhä mukana kaikessa mitä teen - oli kyse sitten projekteista tai työasioista.",
+    "whoami": "Opiskelen tieto- ja viestintätekniikkaa Oulun ammattikorkeakoulussa, painopisteenä ohjelmistokehitys ja pilviteknologiat. Ennen IT-alaa tein yli viisi vuotta teollisuustöitä - hitsausta sekä muuntajien ja kelojen käämintää. Se aika opetti arvostamaan sitä, että asiat tehdään kerralla oikein ja rakennetaan sellaista, mikä oikeasti toimii. Sama ajattelutapa näkyy nyt myös omissa projekteissani.",
     "whatidoTitle": "Mitä teen \uD83D\uDCAD",
-    "whatido": "Rakennan verkkosovelluksia ja taustajärjestelmiä. Keskityn itsehostattuihin palveluihin ja automaatioihin, jotka pyörivät taustalla omassa rauhassaan. Jos jokin on mahdollista automatisoida tai ajaa omalla raudalla, todennäköisesti olen jo sen kimpussa. Harrastan myös elektroniikkaa - juotan piirilevyjä, johdotan ja ohjelmoin mikrokontrollereita kuten ESP32 ja Raspberry Pi. Tykkään yhdistää laitteet ja ohjelmiston toimiviksi kokonaisuuksiksi.",
-    "techstackTitle": "Teknologiat \uD83D\uDEE0\uFE0F️",
-    "projectsTitle": "Projektit \uD83D\uDCC1",
-    "projects": "Vapaa-ajalla teen mielelläni omia projekteja <1>GitHubiin</1>. Se on paras tapa oppia uutta ja pysyä ajan tasalla. Yritän parantaa taitojani askel kerrallaan."
+    "whatido": "Rakennan web-sovelluksia ja backend-ratkaisuja, jotka eivät vaadi jatkuvaa paikkaamista. Tykkään pyörittää juttuja itsehostattuna ja rakentaa automaatioita, jotka hoitavat arkea taustalla ilman säätöä. Jos jonkin voi automatisoida tai ajaa omalla raudalla, olen yleensä jo sen kimpussa. Kahvi auttaa tässä prosessissa.\n\nHarrastan myös elektroniikkaa - juotan, teen kytkentöjä ja ohjelmoin mikrokontrollereita, kuten ESP32 ja Raspberry Pi. Tykkään yhdistää raudan ja softan toimivaksi, hyödylliseksi kokonaisuudeksi.",
+    "whatido_sub": "Etsin parhaillaan harjoittelupaikkaa, opinnäytetyöpaikkaa tai junior-roolia, jossa voin käyttää näitä taitoja oikeassa työympäristössä ja oppia lisää.",
+    "techstackTitle": "Teknologiat 🛠️",
+    "projectsTitle": "Projektit 📁",
+    "projects": "Vapaa-ajalla tykkään rakentaa omia projektejani <1>GitHubissa</1>. Se on helpoin tapa oppia uutta ja pitää taidot liikkeessä. Yritän kehittyä vähän joka päivä.",
+    "projects_showcase": "Tässä muutamia projekteja, joita olen tehnyt oppimisen ja kokeilun kautta."
   },
   "contact": {
     "title": "Jutellaan! \uD83D\uDCAC",
@@ -20,7 +22,7 @@
   "contactForm": {
     "open": "Ota yhteyttä",
     "open_description": "Lähetä minulle sähköpostia!",
-    "title": "Ota yhteyttä",
+    "title": "Ota minuun yhteyttä",
     "description": "Täytä alla oleva lomake lähettääksesi minulle viestin.",
     "emailPlaceholder": "esim. nimesi@example.fi",
     "messagePlaceholder": "Hei Jere...",
@@ -35,7 +37,31 @@
     "awake": "todennäköisesti hereillä",
     "sleeping": "todennäköisesti nukkumassa"
   },
+  "footer": {
+    "rights": "Kaikki oikeudet pidätetään.",
+    "analytics": "Tämä sivusto käyttää yksityisyyttä kunnioittavaa ja anonyymiä analytiikkaa"
+  },
+  "maintenance": {
+    "message": "Sivusto on parhaillaan huollossa."
+  },
   "cta": {
     "web": "Tarvitsetko verkkosivuja? Laita viestiä!"
+  },
+  "badge": {
+    "label": "Status:",
+    "text": "avoin harjoittelu-, opinnäytetyö- ja junior-tehtäville"
+  },
+  "qr": {
+    "error": "Kenttä ei voi olla tyhjä",
+    "title": "QR-koodigeneraattori",
+    "generate": "Generoi QR-koodi",
+    "downloadPng": "Lataa PNG",
+    "downloadSvg": "Lataa SVG",
+    "placeholder": "example.fi",
+    "placeholderUrl": "example.fi",
+    "placeholderText": "Kirjoita tekstiä...",
+    "modeUrl": "URL",
+    "modeText": "Teksti",
+    "modeContact": "Yhteystieto"
   }
 }

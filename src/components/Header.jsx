@@ -2,12 +2,16 @@ import React, { useRef } from 'react';
 import LanguageToggle from '@/components/LanguageToggle.jsx';
 import { Link } from 'react-router-dom';
 import { Tooltip, TooltipTrigger, TooltipContent, TooltipProvider } from '@/components/ui/tooltip';
-import { Link as LinkIcon } from 'lucide-react';
+import { Link as LinkIcon, QrCode } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
 const Header = () => {
   const { t } = useTranslation();
-  const audioRef = useRef(new Audio('/sound/pop.mp3'));
+  const audioRef = useRef(null);
+
+  if (!audioRef.current) {
+    audioRef.current = new Audio('/sound/pop.mp3');
+  }
 
   const click = () => {
     audioRef.current.currentTime = 0;
@@ -42,11 +46,33 @@ const Header = () => {
           </Link>
         </div>
 
-        <div className="flex items-center gap-6">
+        <div className="flex items-center gap-4">
           <TooltipProvider>
+            <Tooltip>
+
+              <TooltipTrigger asChild>
+                <Link
+                  aria-label="QR"
+                  to="/qr"
+                  onClick={() => {
+                    click();
+                    umami.track('QR clicked', { link: 'qr', source: 'Header' });
+                  }}
+                  className="hover:text-orange-400 transition"
+                >
+                  <QrCode size={22} />
+                </Link>
+              </TooltipTrigger>
+
+              <TooltipContent side="bottom">
+                {t('nav.qr', 'QR')}
+              </TooltipContent>
+            </Tooltip>
+
             <Tooltip>
               <TooltipTrigger asChild>
                 <a
+                  aria-label="Links"
                   href="https://links.hillnose.xyz"
                   target="_blank"
                   rel="noopener noreferrer"

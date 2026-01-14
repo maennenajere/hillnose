@@ -5,13 +5,14 @@
   },
   "home": {
     "greet": "Hey, I'm Jere \uD83D\uDC4B",
-    "whoami": "I study ICT engineering at Oulu University of Applied Sciences, focusing on software development and cloud technologies. Before getting into IT, I spent over five years in industrial work - welding and winding transformers and inductors. That time taught me to value clear structure, efficiency, and doing things properly the first time. I still carry the same mindset into everything I build today, whether it’s a personal project, school assignment or work-related.",
+    "whoami": "I'm studying ICT engineering at Oulu University of Applied Sciences, with a focus on software development and cloud tech. Before I got into IT, I spent over five years doing industrial work - welding and winding transformers and inductors. That background taught me the value of getting things right the first time and building things that actually work. I bring that same approach to my projects now.",
     "whatidoTitle": "What I Do \uD83D\uDCAD",
-    "whatido": "I build web apps and backend systems that stay stable without constant babysitting. I focus on self-hosted services and automation workflows that run quietly in the background. If something can be automated or run on my own hardware, I’m usually already doing it. Coffee may or may not be involved. (It is.). I also tinker with electronics - soldering, wiring and programming microcontrollers like ESP32s and Raspberry Pis. I like connecting the hardware and software into something useful.",
+    "whatido": "I build web apps and backend systems that don't need constant fixing. I'm drawn to self-hosted services and automation - the kind of stuff that runs quietly in the background and just works. If I can automate something or run it on my own hardware, I probably will. Coffee helps with this process.\n\nI also mess around with electronics. Soldering, wiring, programming ESP32s and Raspberry Pis. I like the challenge of connecting hardware and software into actually useful.",
+    "whatido_sub": "Right now I'm looking for an internship, thesis position, or junior role where I can use these skills in a real environment and keep learning.",
     "techstackTitle": "Technologies \uD83D\uDEE0\uFE0F️",
     "projectsTitle": "Projects \uD83D\uDCC1",
-    "projects": "In my free time, I enjoy building my own projects on <1>GitHub</1>. It’s the best way for me to learn new things and stay up to date. I try to improve my skills step by step, every day.",
-    "projects_showcase": "Here are some examples of projects I’ve built while learning."
+    "projects": "In my free time I like building my own projects on <1>GitHub</1>. It's the easiest way for me to pick up new things and keep my skills moving forward. I try to get a little better every day.",
+    "projects_showcase": "Here are a few projects I've built while learning and experimenting."
   },
   "contact": {
     "title": "Let's chat! \uD83D\uDCAC",
@@ -36,12 +37,30 @@
     "sleeping": "likely asleep"
   },
   "footer": {
-    "rights": "All rights reserved."
+    "rights": "All rights reserved.",
+    "analytics": "This site uses privacy-friendly, anonymous analytics via"
   },
   "maintenance": {
     "message": "Site is currently undergoing scheduled maintenance."
   },
   "cta": {
     "web": "In need of a website? Just drop me a message!"
+  },
+  "badge": {
+    "label": "Status:",
+    "text": "open for internship, thesis work, or junior developer roles"
+  },
+  "qr": {
+    "error": "Input cannot be empty",
+    "title": "QR Code Generator",
+    "generate": "Generate QR Code",
+    "downloadPng": "Download PNG",
+    "downloadSvg": "Download SVG",
+    "placeholder": "example.com",
+    "placeholderUrl": "example.com",
+    "placeholderText": "Enter text...",
+    "modeUrl": "URL",
+    "modeText": "Plain Text",
+    "modeContact": "Contact"
   }
 }

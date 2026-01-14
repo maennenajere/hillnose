@@ -26,3 +26,6 @@ bunlock.json
 *.njsproj
 *.sln
 *.sw?
+src/assets/photo/avatar.webp
+src/assets/photo/qr-code.png
+src/assets/photo/avatar1.webp
