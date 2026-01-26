@@ -4,7 +4,7 @@
     "contact": "Get in Touch"
   },
   "home": {
-    "greet": "Hey, I'm Jere \uD83D\uDC4B",
+    "greet": "Hi, I'm Jere \uD83D\uDC4B",
     "whoami": "I'm studying ICT engineering at Oulu University of Applied Sciences, with a focus on software development and cloud tech. Before I got into IT, I spent over five years doing industrial work - welding and winding transformers and inductors. That background taught me the value of getting things right the first time and building things that actually work. I bring that same approach to my projects now.",
     "whatidoTitle": "What I Do \uD83D\uDCAD",
     "whatido": "I build web apps and backend systems that don't need constant fixing. I'm drawn to self-hosted services and automation - the kind of stuff that runs quietly in the background and just works. If I can automate something or run it on my own hardware, I probably will. Coffee helps with this process.\n\nI also mess around with electronics. Soldering, wiring, programming ESP32s and Raspberry Pis. I like the challenge of connecting hardware and software into actually useful.",
@@ -16,7 +16,7 @@
   },
   "contact": {
     "title": "Let's chat! \uD83D\uDCAC",
-    "description": "Whether it’s a quick question, job thing, or you just felt like saying hello. Write below or find me on Discord, Telegram or email"
+    "description": "Whether it's a quick question, job thing, or you just felt like saying hello. Write below or find me on Discord, Telegram or email"
   },
   "contactForm": {
     "open": "Get in Touch",
@@ -48,7 +48,7 @@
   },
   "badge": {
     "label": "Status:",
-    "text": "open for internship, thesis work, or junior developer roles"
+     "text": "Software Developer - open to side projects and collaborations"
   },
   "qr": {
     "error": "Input cannot be empty",
