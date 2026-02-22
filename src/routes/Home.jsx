@@ -34,7 +34,7 @@ const Home = () => {
                     {t('home.whatido')}
                 </p>
                 <p className="text-white tracking-wider whitespace-pre-line">
-                    {t('home.whatido_sub')}
+                    {t('home.openToWork')}
                 </p>
             </section>
 
