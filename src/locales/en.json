@@ -9,6 +9,7 @@
     "whatidoTitle": "What I Do \uD83D\uDCAD",
     "whatido": "I build web apps and backend systems that don't need constant fixing. I'm drawn to self-hosted services and automation - the kind of stuff that runs quietly in the background and just works. If I can automate something or run it on my own hardware, I probably will. Coffee helps with this process.\n\nI also mess around with electronics. Soldering, wiring, programming ESP32s and Raspberry Pis. I like the challenge of connecting hardware and software into actually useful.",
     "whatido_sub": "Right now I'm looking for an internship, thesis position, or junior role where I can use these skills in a real environment and keep learning.",
+    "openToWork": "I am currently open to new side projects and collaboration opportunities.",
     "techstackTitle": "Technologies \uD83D\uDEE0\uFE0F️",
     "projectsTitle": "Projects \uD83D\uDCC1",
     "projects": "In my free time I like building my own projects on <1>GitHub</1>. It's the easiest way for me to pick up new things and keep my skills moving forward. I try to get a little better every day.",
@@ -48,7 +49,7 @@
   },
   "badge": {
     "label": "Status:",
-     "text": "Software Developer - open to side projects and collaborations"
+    "text": "Software Developer - open to side projects and collaborations"
   },
   "qr": {
     "error": "Input cannot be empty",
