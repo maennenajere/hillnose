@@ -10,7 +10,7 @@ import Footer from './components/Footer.jsx'
 import { useTranslation } from 'react-i18next'
 import Snowfall from 'react-snowfall'
 
-const SHOW_SNOWFLAKES = true
+const SHOW_SNOWFLAKES = false
 export default function App() {
     return (
         <div className="relative min-h-dvh bg-app-background">
