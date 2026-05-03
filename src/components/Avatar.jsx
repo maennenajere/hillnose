@@ -1,5 +1,5 @@
 import React from 'react';
-import avatar from '../assets/photo/avatar1.webp';
+import avatar from '../assets/photo/avatar.webp';
 
 const Avatar = () => {
     return (
