@@ -2,15 +2,14 @@ import React from 'react'
 import { Routes, Route } from 'react-router-dom'
 import Home from './routes/Home.jsx'
 import Contact from './routes/Contact.jsx'
-import QRSite from './routes/QRSite.jsx'
 import NotFound from './routes/NotFound.jsx'
 import BeaknetDemo from './routes/BeaknetDemo.jsx'
 import Header from './components/Header.jsx'
 import Footer from './components/Footer.jsx'
-import { useTranslation } from 'react-i18next'
 import Snowfall from 'react-snowfall'
 
 const SHOW_SNOWFLAKES = false
+
 export default function App() {
     return (
         <div className="relative min-h-dvh bg-app-background">
@@ -20,8 +19,8 @@ export default function App() {
                     <Routes>
                         <Route path="/" element={<Home />} />
                         <Route path="/contact" element={<Contact />} />
-                        <Route path="/qr" element={<QRSite />} />
                         <Route path="/beaknet-demo" element={<BeaknetDemo />} />
+                        <Route path="*" element={<NotFound />} />
                     </Routes>
                     <Footer />
                 </div>

@@ -3,6 +3,7 @@ import { MdMailOutline } from "react-icons/md";
 import { FaDiscord, FaTelegram } from "react-icons/fa6";
 import ContactForm from "../components/ContactForm";
 import { useTranslation } from "react-i18next";
+import Seo from "../components/Seo.jsx";
 
 const Contact = () => {
     const { t } = useTranslation();
@@ -24,6 +25,7 @@ const Contact = () => {
 
     return (
         <>
+            <Seo page="contact" path="/contact" />
             <section className="flex flex-col text-left text-white text-lg mt-10 w-full">
                 <h1 className="text-white font-bold text-5xl md:text-5xl lg:text-5xl mb-2">{t('contact.title')}</h1>
                 <p className="text-white/70 mt-2">
@@ -70,18 +72,18 @@ const Contact = () => {
                     <p className="font-bold">@maeennenae</p>
                 </a>
                 <a
-                    href="mailto:contact@hillnose.xyz"
+                    href="mailto:info@jeremaennena.dev"
                     onClick={() =>
                         umami.track("Contact link clicked Email", {
                             type: "email",
-                            value: "contact@hillnose.xyz",
+                            value: "info@jeremaennena.dev",
                             source: "Contact"
                         })
                     }
                     className="flex-1 flex items-center justify-center gap-2 bg-transparent text-white text-l border border-white rounded-lg px-2 py-2 hover:border-orange-400 transition-colors"
                 >
                     <MdMailOutline size={30} color="white" />
-                    <p className="font-bold">contact@hillnose.xyz</p>
+                    <p className="font-bold">info@jeremaennena.dev</p>
                 </a>
             </div>
         </>

@@ -6,9 +6,8 @@
   "home": {
     "greet": "Hei, olen Jere 👋",
     "whoami": "Opiskelen tieto- ja viestintätekniikkaa Oulun ammattikorkeakoulussa, painopisteenä ohjelmistokehitys ja pilviteknologiat. Ennen IT-alaa tein yli viisi vuotta teollisuustöitä - hitsausta sekä muuntajien ja kelojen käämintää. Se aika opetti arvostamaan sitä, että asiat tehdään kerralla oikein ja rakennetaan sellaista, mikä oikeasti toimii. Sama ajattelutapa näkyy nyt myös omissa projekteissani.",
-    "whatidoTitle": "Mitä teen \uD83D\uDCAD",
+    "whatidoTitle": "Mitä teen 💭",
     "whatido": "Rakennan web-sovelluksia ja backend-ratkaisuja, jotka eivät vaadi jatkuvaa paikkaamista. Tykkään pyörittää juttuja itsehostattuna ja rakentaa automaatioita, jotka hoitavat arkea taustalla ilman säätöä. Jos jonkin voi automatisoida tai ajaa omalla raudalla, olen yleensä jo sen kimpussa. Kahvi auttaa tässä prosessissa.\n\nHarrastan myös elektroniikkaa - juotan, teen kytkentöjä ja ohjelmoin mikrokontrollereita, kuten ESP32 ja Raspberry Pi. Tykkään yhdistää raudan ja softan toimivaksi, hyödylliseksi kokonaisuudeksi.",
-    "whatido_sub": "Etsin parhaillaan harjoittelupaikkaa, opinnäytetyöpaikkaa tai junior-roolia, jossa voin käyttää näitä taitoja oikeassa työympäristössä ja oppia lisää.",
     "openToWork": "Olen tällä hetkellä avoin uusille sivuprojekteille ja yhteistyömahdollisuuksille.",
     "techstackTitle": "Teknologiat 🛠️",
     "projectsTitle": "Projektit 📁",
@@ -16,22 +15,16 @@
     "projects_showcase": "Tässä muutamia projekteja, joita olen tehnyt oppimisen ja kokeilun kautta."
   },
   "contact": {
-    "title": "Jutellaan! \uD83D\uDCAC",
-    "description": "Olipa kyseessä nopea kysymys, duunijuttu, tai halusit vaan moikata. Kirjoita alle tai laita viestiä Discordissa, Telegramissa tai sähköpostilla.",
-    "timeframe": "Minulle kello on tällä hetkellä <1>{{time}}</1>, joten olen todennäköisesti <2>{{status}}</2>. Otan sinuun pian yhteyttä."
+    "title": "Jutellaan! 💬",
+    "description": "Olipa kyseessä nopea kysymys, duunijuttu, tai halusit vaan moikata. Kirjoita alle tai laita viestiä Discordissa, Telegramissa tai sähköpostilla."
   },
   "contactForm": {
     "open": "Ota yhteyttä",
-    "open_description": "Lähetä minulle sähköpostia!",
-    "title": "Ota minuun yhteyttä",
-    "description": "Täytä alla oleva lomake lähettääksesi minulle viestin.",
     "emailPlaceholder": "esim. nimesi@example.fi",
     "messagePlaceholder": "Hei Jere...",
-    "name": "Nimi",
     "email": "Sähköposti",
     "message": "Viesti",
     "send": "Lähetä",
-    "cancel": "Peruuta",
     "success": "Kiitos viestistäsi! Vastaan sinulle pian.",
     "error": "Viestin lähettämisessä tapahtui virhe. Yritä myöhemmin uudelleen.",
     "timeMessage": "Minulle kello on {{time}}, joten olen {{status}}. Palaan sinulle pian.",
@@ -52,17 +45,26 @@
     "label": "Status:",
     "text": "Ohjelmistokehittäjä - avoin sivuprojekteille ja yhteistyölle"
   },
-  "qr": {
-    "error": "Kenttä ei voi olla tyhjä",
-    "title": "QR-koodigeneraattori",
-    "generate": "Generoi QR-koodi",
-    "downloadPng": "Lataa PNG",
-    "downloadSvg": "Lataa SVG",
-    "placeholder": "example.fi",
-    "placeholderUrl": "example.fi",
-    "placeholderText": "Kirjoita tekstiä...",
-    "modeUrl": "URL",
-    "modeText": "Teksti",
-    "modeContact": "Yhteystieto"
+  "seo": {
+    "home": {
+      "title": "Jere Mäennenä - Ohjelmistokehittäjän portfolio | Hillnose",
+      "description": "Jere Mäennenän portfolio. Tieto- ja viestintätekniikan opiskelija Oulusta: web-sovelluksia, backend-järjestelmiä, itse ylläpidettyjä palveluita ja elektroniikkaa. Etsin harjoittelu-, opinnäytetyö- tai junior-paikkaa."
+    },
+    "contact": {
+      "title": "Ota yhteyttä - Jere Mäennenä | Hillnose",
+      "description": "Ota yhteyttä Jere Mäennenään harjoittelu-, opinnäytetyö- tai junior-kehittäjäasioissa tai verkkosivuprojekteissa. Yhteydenottolomake, Discord, Telegram ja sähköposti."
+    },
+    "demo": {
+      "title": "Beaky-demo | Hillnose",
+      "description": "Kuvakaappausdemo Beakysta, Jere Mäennenän projektista."
+    },
+    "notFound": {
+      "title": "Sivua ei löytynyt | Hillnose",
+      "description": "Tätä sivua ei ole olemassa."
+    }
+  },
+  "notFound": {
+    "message": "Täällä on aika tyhjää - sivua ei löytynyt.",
+    "back": "Takaisin etusivulle"
   }
 }

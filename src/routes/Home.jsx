@@ -1,16 +1,17 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import TechStack from '@/components/TechStack.jsx';
 import RepoList from '@/components/RepoList.jsx';
 import Avatar from '@/components/Avatar.jsx';
 import Badge from '@/components/Badge.jsx';
 import { useTranslation, Trans } from "react-i18next";
-import { Link } from 'react-router-dom';
+import Seo from '@/components/Seo.jsx';
 
 const Home = () => {
     const { t } = useTranslation();
 
     return (
         <>
+            <Seo page="home" path="/" />
             <section className="flex flex-col md:flex-row gap-8 items-center text-left text-white bg-transparent w-full mt-10">
                 <div className="flex-1 flex flex-col gap-3">
                     <h1 className="text-white font-bold text-5xl md:text-5xl lg:text-5xl mb-4">{t('home.greet')}</h1>

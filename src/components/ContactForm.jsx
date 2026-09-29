@@ -1,21 +1,45 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { useTranslation } from "react-i18next";
 
 function ContactForm() {
     const [submitting, setSubmitting] = useState(false);
     const [succeeded, setSucceeded] = useState(false);
     const [turnstileToken, setTurnstileToken] = useState("");
+    const widgetIdRef = useRef(null);
     const { t } = useTranslation();
 
     useEffect(() => {
-        if (!window.turnstile) return;
+        let cancelled = false;
 
-        const id = window.turnstile.render("#turnstile-container", {
-            sitekey: import.meta.env.VITE_TURNSTILE_SITEKEY,
-            callback: (token) => setTurnstileToken(token),
-        });
+        function renderWidget() {
+            if (cancelled) return;
+            widgetIdRef.current = window.turnstile.render("#turnstile-container", {
+                sitekey: import.meta.env.VITE_TURNSTILE_SITEKEY,
+                callback: (token) => setTurnstileToken(token),
+                "expired-callback": () => setTurnstileToken(""),
+                "error-callback": () => setTurnstileToken(""),
+            });
+        }
 
-        return () => window.turnstile?.remove(id);
+        if (window.turnstile) {
+            renderWidget();
+        } else {
+            const existing = document.querySelector('script[src^="https://challenges.cloudflare.com/turnstile"]');
+            if (existing) {
+                existing.addEventListener("load", renderWidget);
+            } else {
+                const script = document.createElement("script");
+                script.src = "https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit";
+                script.async = true;
+                script.onload = renderWidget;
+                document.head.appendChild(script);
+            }
+        }
+
+        return () => {
+            cancelled = true;
+            if (widgetIdRef.current !== null) window.turnstile?.remove(widgetIdRef.current);
+        };
     }, []);
 
     const handleSubmit = async (e) => {
@@ -25,6 +49,7 @@ function ContactForm() {
         const formData = new FormData(e.target);
         const data = Object.fromEntries(formData.entries());
 
+        let succeededNow = false;
         try {
             const response = await fetch(import.meta.env.VITE_FORMSPARK_ACTION_URL, {
                 method: "POST",
@@ -36,14 +61,20 @@ function ContactForm() {
             });
 
             if (response.ok) {
+                succeededNow = true;
                 setSucceeded(true);
             } else {
-                alert("Something went wrong. Please try again.");
+                alert(t('contactForm.error'));
             }
         } catch (error) {
             console.error("Form submission error:", error);
-            alert("Something went wrong. Please try again.");
+            alert(t('contactForm.error'));
         } finally {
+            // Turnstile tokens are single-use, so a retry needs a fresh one
+            if (!succeededNow && widgetIdRef.current !== null) {
+                setTurnstileToken("");
+                window.turnstile?.reset(widgetIdRef.current);
+            }
             setSubmitting(false);
         }
     };

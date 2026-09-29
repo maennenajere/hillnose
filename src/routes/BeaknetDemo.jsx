@@ -1,8 +1,11 @@
 import React from 'react';
 import beakyDemo from '../assets/photo/BeakyDemo.png';
+import Seo from '../components/Seo.jsx';
 
 const BeakyDemo = () => {
     return (
+        <>
+        <Seo page="demo" path="/beaknet-demo" noindex />
         <section className="flex flex-col gap-4 items-center text-center text-white bg-transparent w-full">
             <h1 className="text-white font-bold text-3xl md:text-5xl">Beaky Demo</h1>
 
@@ -14,6 +17,7 @@ const BeakyDemo = () => {
                 />
             </div>
         </section>
+        </>
     );
 };
 

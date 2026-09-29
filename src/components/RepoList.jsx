@@ -1,11 +1,24 @@
 import React, { useEffect, useState, useRef } from "react";
 import { ExternalLink, Star, Calendar, Code2 } from "lucide-react";
 
+const username = "maennenajere";
+const show = [
+    "hillnose",
+    "hillnoselinks",
+    "ATM-Project-2024",
+    "Web-Development-Project-2024",
+    "MotionPath",
+    "beaknet",
+    "TastyOulu"
+];
+
+const CACHE_KEY = `repos:${username}`;
+const CACHE_TTL_MS = 60 * 60 * 1000; // 1h - stays well under GitHub's 60 req/h anonymous limit
+
 export default function RepoList() {
     const [repos, setRepos] = useState([]);
     const [error, setError] = useState(null);
     const [loading, setLoading] = useState(true);
-    const username = "maennenajere";
 
     const audioRef = useRef(null);
     useEffect(() => {
@@ -18,15 +31,6 @@ export default function RepoList() {
         audioRef.current.play();
     };
 
-    const show = [
-        "hillnose",
-        "hillnoselinks",
-        "ATM-Project-2024",
-        "Web-Development-Project-2024",
-        "MotionPath",
-        "beaknet",
-        "TastyOulu"
-    ];
 
     useEffect(() => {
         async function fetchRepos() {
@@ -34,6 +38,16 @@ export default function RepoList() {
             setError(null);
 
             try {
+                const cached = sessionStorage.getItem(CACHE_KEY);
+                if (cached) {
+                    const { data, cachedAt } = JSON.parse(cached);
+                    if (Date.now() - cachedAt < CACHE_TTL_MS) {
+                        setRepos(data);
+                        setLoading(false);
+                        return;
+                    }
+                }
+
                 const res = await fetch(`https://api.github.com/users/${username}/repos`);
                 if (!res.ok) throw new Error(`GitHub API: ${res.status} ${res.statusText}`);
                 const data = await res.json();
@@ -42,6 +56,7 @@ export default function RepoList() {
                     ? data.filter(repo => show.includes(repo.name))
                     : [];
 
+                sessionStorage.setItem(CACHE_KEY, JSON.stringify({ data: filtered, cachedAt: Date.now() }));
                 setRepos(filtered);
             } catch (err) {
                 setError(err.message || "Failed to fetch repositories");
